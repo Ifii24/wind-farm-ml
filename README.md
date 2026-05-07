@@ -3,7 +3,7 @@
 **Advanced Business Analytics — DTU (Technical University of Denmark)**
 **Course 42578 | April 2023**
 
-A four-part data science project exploring how machine learning can help energy companies schedule operations around wind energy production — reducing reliance on fossil fuels and minimising exposure to CO₂ taxation.
+A four-part data science project exploring how machine learning can help energy companies schedule operations around wind energy production and reducing reliance on fossil fuels and minimising exposure to CO₂ taxation.
 
 ---
 
@@ -11,7 +11,7 @@ A four-part data science project exploring how machine learning can help energy 
 
 Energy-intensive industries (data centres, manufacturing, aluminium smelting) consume large amounts of electricity around the clock. With Denmark introducing a corporate carbon tax of up to **1,125 DKK/tCO₂ (≈ €150)** from 2025, companies have a strong financial incentive to shift high-consumption operations to windows when wind farms are producing clean electricity.
 
-To do that, they need accurate short-term forecasts of wind farm output. This project builds exactly that — a pipeline that goes from raw weather data to predicted power output for specific wind farm locations across Europe.
+To do that, they need accurate short-term forecasts of wind farm output. This project builds  a pipeline that goes from raw weather data to predicted power output for specific wind farm locations across Europe.
 
 ---
 
