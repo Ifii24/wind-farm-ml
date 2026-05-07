@@ -1,0 +1,15 @@
+.DS_Store
+__MACOSX
+*.DS_Store
+._*
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+*.nc
+*.shp
+*.shx
+*.dbf
+*.prj
+*.xlsx
+*.csv
+data/
