@@ -1,7 +1,7 @@
 # Machine Learning for Wind Farm Output Forecasting
 
-**Advanced Business Analytics — DTU (Technical University of Denmark)**
-**Course 42578 | April 2023**
+**Business Analytics — DTU (Technical University of Denmark)**
+**Course 42577 | Dec 2022**
 
 A four-part data science project exploring how machine learning can help energy companies schedule operations around wind energy production and reducing reliance on fossil fuels and minimising exposure to CO₂ taxation.
 
