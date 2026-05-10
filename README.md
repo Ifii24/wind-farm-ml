@@ -33,29 +33,29 @@ wind-farm-ml/
 
 ## The four parts
 
-### Part 1 — Wind Speed Forecasting
+### Part 1: Wind Speed Forecasting
 **Goal:** Predict wind speed 4 hours ahead at four wind farm locations (Denmark, Greece, Spain, Bulgaria).
 
-Weather data is collected from open meteorological APIs and the Global Wind Power Tracker. The analysis includes stationarity testing (Augmented Dickey-Fuller), Granger causality tests to identify which weather variables actually drive wind speed, and time-series forecasting using **Facebook Prophet** with multivariate regressors. The 4-hour horizon was chosen as the minimum actionable window for industrial load scheduling.
+Weather data is collected from open meteorological APIs and the Global Wind Power Tracker. The analysis includes stationarity testing (Augmented Dickey-Fuller), Granger causality tests to identify which weather variables actually drive wind speed and time-series forecasting using **Facebook Prophet** with multivariate regressors. The 4-hour horizon was chosen as the minimum actionable window for industrial load scheduling.
 
 Also includes a web scraper (Selenium + BeautifulSoup) to collect live wind farm production data from windpowerenergy.net for benchmarking.
 
-### Part 2 — Capacity Factor Prediction
-**Goal:** Given predicted wind speed, predict the capacity factor (actual output / maximum possible output) of a wind farm.
+### Part 2: Capacity Factor Prediction
+**Goal:** Given predicted wind speed predict the capacity factor (actual output / maximum possible output) of a wind farm.
 
 Uses historical capacity factor data from a large European dataset (84 million rows across thousands of onshore wind sites). Multiple regression models are trained and compared. The best-performing model is then chained with Part 1's wind speed forecasts to produce an end-to-end power output prediction.
 
-### Part 3 — Identifying New Wind Farm Locations
+### Part 3: Identifying New Wind Farm Locations
 **Goal:** Filter suitable locations across Europe for potential new wind farm construction.
 
-Combines land use data from the EU's GISCO dataset (Eurostat), electricity grid infrastructure data, and topological constraints. GeoPandas is used for spatial analysis and filtering — areas like forests, urban zones, water bodies, and protected land are excluded. The output is a ranked list of candidate sites with favourable wind conditions and viable grid access.
+Combines land use data from the EU's GISCO dataset (Eurostat), electricity grid infrastructure data and topological constraints. GeoPandas is used for spatial analysis and filtering: areas like forests, urban zones, water bodies, and protected land are excluded. The output is a ranked list of candidate sites with favourable wind conditions and viable grid access.
 
-### Part 4 — Case Studies
+### Part 4: Case Studies
 **Goal:** Validate the full pipeline on real-world examples.
 
 Two case studies:
-1. **New location selection** — applies the capacity factor models to the filtered candidate sites from Part 3, selecting the most promising locations based on predicted average annual output.
-2. **Danish wind farm validation** — applies the full weather → capacity factor pipeline to a real Danish wind farm and benchmarks predictions against actual production data scraped from windpowerenergy.net.
+1. **New location selection**: applies the capacity factor models to the filtered candidate sites from Part 3, selecting the most promising locations based on predicted average annual output.
+2. **Danish wind farm validation**: applies the full weather → capacity factor pipeline to a real Danish wind farm and benchmarks predictions against actual production data scraped from windpowerenergy.net.
 
 ---
 
@@ -86,7 +86,7 @@ Two case studies:
 
 ## How to run
 
-The notebooks run sequentially — Part 1 outputs feed into Part 2, Part 2 feeds into Part 4.
+The notebooks run sequentially. Part 1 outputs feed into Part 2, Part 2 feeds into Part 4.
 
 ```bash
 pip install pandas numpy matplotlib seaborn scikit-learn prophet xarray geopandas folium selenium requests
